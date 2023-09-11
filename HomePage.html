@@ -50,52 +50,84 @@
         </div>
       </div>
 
-      <div class="container_books">
-        <div class="books_read">
-          <div class="content_form_input">
-            <input
-              type="text"
-              class="text"
-              value="I have read this book"
-              readonly
-            />
+      <div class="Books_List_Container">
+        <h3 style="text-align: center" class="Books_List_NoBooks">
+          No books to display
+        </h3>
+
+        <div class="Books_List"></div>
+      </div>
+
+      <div class="Add_Book_Modal">
+        <div class="Add_Book_Modal--overlay"></div>
+        <div class="Add_Book_Container">
+          <div class="Add_Book_Content">
+            <h3 class="Add_Book_Modal_Title">Add Book</h3>
+            <div
+              class="Add_Book_Modal_Close_Button"
+              onclick="hideAddBookModal()"
+            >
+              <svg
+                fill="#E07C34"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="20px"
+                height="20px"
+                viewBox="0 0 305.002 305.002"
+                xml:space="preserve"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M152.502,0.001C68.412,0.001,0,68.412,0,152.501s68.412,152.5,152.502,152.5c84.089,0,152.5-68.411,152.5-152.5
+                    S236.591,0.001,152.502,0.001z M152.502,280.001C82.197,280.001,25,222.806,25,152.501c0-70.304,57.197-127.5,127.502-127.5
+                    c70.304,0,127.5,57.196,127.5,127.5C280.002,222.806,222.806,280.001,152.502,280.001z"
+                    ></path>
+                    <path
+                      d="M170.18,152.5l43.13-43.129c4.882-4.882,4.882-12.796,0-17.678c-4.881-4.882-12.796-4.881-17.678,0l-43.13,43.13
+                    l-43.131-43.131c-4.882-4.881-12.796-4.881-17.678,0c-4.881,4.882-4.881,12.796,0,17.678l43.13,43.13l-43.131,43.131
+                    c-4.881,4.882-4.881,12.796,0,17.679c2.441,2.44,5.64,3.66,8.839,3.66c3.199,0,6.398-1.221,8.839-3.66l43.131-43.132
+                    l43.131,43.132c2.441,2.439,5.64,3.66,8.839,3.66s6.398-1.221,8.839-3.66c4.882-4.883,4.882-12.797,0-17.679L170.18,152.5z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div class="Add_Book_Form">
+              <input
+                type="text"
+                id="title_form"
+                name="title_form"
+                placeholder="TITLE"
+                required
+              />
+              <input
+                type="text"
+                id="author_form"
+                name="author_form"
+                placeholder="AUTHOR"
+                required
+              />
+              <input
+                type="text"
+                id="genre_form"
+                name="genre_form"
+                placeholder="GENRE"
+                required
+              />
+              <div class="Add_Book_Form_Button_Container">
+                <button type="submit" onclick="myBooksState.addBookFromForm()">
+                  Add
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="actions">
-          <button class="Edit">Edit</button>
-          <button class="Delete">Delete</button>
         </div>
       </div>
 
-      <div class="Add_Book_Container">
-        <form class="Add_Book_Form" action="HomePage.html">
-          <input
-            type="text"
-            id="title_form"
-            name="title_form"
-            placeholder="TITLE"
-            required
-          />
-          <input
-            type="text"
-            id="author_form"
-            name="author_form"
-            placeholder="AUTHOR"
-            required
-          />
-          <input
-            type="text"
-            id="genre_form"
-            name="genre_form"
-            placeholder="GENRE"
-            required
-          />
-          <input type="submit" value="ADD" />
-        </form>
-
-        <div class="Add_Book_Title">
-          <button id="addBookBtn" onclick="showForm()">ADD A BOOK</button>
-        </div>
+      <div class="Add_Book_Title">
+        <button id="addBookBtn" onclick="showAddBookModal()">ADD A BOOK</button>
       </div>
     </div>
 

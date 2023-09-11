@@ -108,7 +108,6 @@ li {
   font-size: 15px;
   padding: 5px;
   text-align: center;
-
 }
 
 li:last-child {
@@ -120,7 +119,7 @@ li:hover {
 }
 
 .dropdown {
-    position: relative;
+  position: relative;
 }
 
 #optionsList:checked ~ #dropdownContainer {
@@ -134,4 +133,155 @@ li:hover {
   width: 60px;
   background-color: #fff;
   top: 20px;
+}
+
+.Add_Book_Modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+}
+
+.Add_Book_Modal.open {
+  display: block;
+}
+
+.Add_Book_Modal--overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.Add_Book_Container {
+  position: absolute;
+  background: #f6e7cd;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 320px;
+}
+
+.Add_Book_Content {
+  padding: 16px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.Add_Book_Modal_Title {
+  color: #e07c34;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.Add_Book_Modal_Close_Button {
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  cursor: pointer;
+}
+
+.Add_Book_Form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 8px;
+}
+
+.Add_Book_Form input[type="text"] {
+  border: 1px solid #343434;
+  border-radius: 4px;
+  background: #fff7e9;
+  color: #e07c34;
+  padding: 4px 4px;
+}
+
+.Add_Book_Form_Button_Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Add_Book_Form button {
+  border: 0;
+  border-radius: 16px;
+  background: #e07c34;
+  color: white;
+  padding: 6px 16px;
+  cursor: pointer;
+}
+
+.Add_Book_Form button:hover {
+  filter: brightness(1.1);
+}
+
+.Books_List {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  overflow: auto;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.Book_Item {
+  /* todo: media query */
+  width: 400px;
+  border-radius: 8px;
+  border: 2px solid #e07c34;
+  background: #fff7e9;
+  overflow: hidden;
+}
+
+.Book_Item_Content {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 4px;
+  padding: 8px;
+}
+
+.Book_Item_Title:before,
+.Book_Item_Author:before,
+.Book_Item_Genre:before {
+  position: relative;
+  margin-right: 4px;
+  color: #888;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.Book_Item_Title:before {
+  content: "Title:";
+}
+.Book_Item_Author:before {
+  content: "Author:";
+}
+.Book_Item_Genre:before {
+  content: "Genre:";
+}
+
+.Book_Item_Actions_Container {
+  padding: 0 8px 8px 8px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.Book_Item_Actions_Container > button {
+  border: 0;
+  border-radius: 16px;
+  background: #e07c34;
+  color: white;
+  padding: 6px 16px;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
 }
