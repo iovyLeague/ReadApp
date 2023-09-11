@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Alice", serif;
+    box-sizing: border-box;
+    background-color: #343434;
+  }
+  
+  #Logo_App {
+    width: 7rem;
+    height: 7rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    border-radius: 10%;
+    border-color: #e07c34;
+  }
+  
+  #Logo_Header {
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    color: #f6e7cd;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .container {
+    margin-top: auto;
+    max-width: 500px;
+    background-color: #fff7e9;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 24px;
+    overflow: hidden;
+    padding: 16px 16px;
+  }
+  
+  @media only screen and (min-width: 424px) {
+    .container {
+      padding: 24px 36px;
+    }
+  }
+
+  .Email_Display {
+    font-size: 17px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  .verify_display{
+    font-size: 17px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  .back_to_logIn{
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .return_to_LogIn_button{
+    font-size: 14px;
+    color: #e07c34;
+    font-family: "Alice", sans-serif;
+    text-decoration: none;
+  }
+
+  .return_to_LogIn_button:hover {
+    color: #343434;
+  }
+
+  .return_to_LogIn_button:active {
+    color: #e07c34;
+  }

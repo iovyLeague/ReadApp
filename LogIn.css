@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --alb-bej: #f6e7cd;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Alice", serif;
+  box-sizing: border-box;
+  background-color: #343434;
+}
+
+#Logo_App {
+  width: 7rem;
+  height: 7rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  border-radius: 10%;
+  border-color: #e07c34;
+}
+
+#Logo_Header {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  color: #f6e7cd;
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.container {
+  margin-top: auto;
+  max-width: 500px;
+  background-color: #fff7e9;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 16px 16px;
+}
+
+@media only screen and (min-width: 424px) {
+  .container {
+    padding: 24px 36px;
+  }
+}
+
+#Log_In_display {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background: #e89d60;
+  height: 40px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+
+.row_pass {
+  margin-bottom: 5px;
+}
+
+.log_in_logo {
+  height: 20px;
+  width: 20px;
+  margin-left: 16px;
+}
+
+.horizontal-divider {
+  background: #000;
+  width: 2px;
+  border-radius: 2px;
+  height: 50%;
+  margin: 0 4px 0 8px;
+}
+
+input {
+  flex: auto;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 5px;
+}
+
+.log_in_button {
+  display: flex;
+  justify-content: flex-end;
+  width: 17px;
+  height: 17px;
+  margin-right: 15px;
+}
+
+.under_pass {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.under_pass {
+  padding: 0 14px;
+}
+
+.remember {
+  display: inline-block;
+  margin-top: 5px;
+  margin-right: 5px;
+  font-size: 12px;
+  font-family: "Alice", sans-serif;
+}
+
+.checkbox,
+.checkbox label {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #e07c34;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: var(--alb-bej);
+}
+
+input[type="checkbox"]:checked::after {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  font-size: 10px;
+  color: var(--alb-bej);
+}
+
+input[type="checkbox"]:hover {
+  background-color: #e89d60;
+}
+
+.forgot_pass {
+  display: inline-block;
+  font-size: 15px;
+  color: #e07c34;
+  font-family: "Alice", sans-serif;
+}
+
+.forgot_pass:hover {
+  color: #343434;
+}
+
+.forgot_pass:active {
+  color: #e07c34;
+}
+
+.continue-section {
+  margin-top: 36px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.row_continue {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background: #e89d60;
+  height: 40px;
+  width: 200px;
+  border-radius: 40px;
+  align-self: center;
+}
+
+.continue_button {
+  text-decoration: none;
+}
+
+.continue_LogIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+  width: fit-content;
+  color: #f6e7cd;
+}
+
+.continue_LogIn:hover {
+  color: #343434;
+}
+
+.SignUp_redirect {
+  align-self: center;
+  margin-top: 16px;
+}
+
+.account_question {
+  display: inline-block;
+  font-size: 15px;
+  color: #343434;
+  font-family: "Alice", sans-serif;
+}
+
+.SignUp_button {
+  display: inline-block;
+  font-size: 15px;
+  color: #e07c34;
+  font-family: "Alice", sans-serif;
+}
+
+.SignUp_button:hover {
+  color: #343434;
+}
+
+.SignUp_button:active {
+  color: #e07c34;
+}
+
+.username-reset-button,
+.password-eye-button {
+  display: block;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.username-reset-button svg {
+  fill: var(--alb-bej);
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.password-eye-button svg {
+  stroke: var(--alb-bej);
+  margin-right: 12px;
+  cursor: pointer;
+}

@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Alice", serif;
+  box-sizing: border-box;
+  background-color: #343434;
+}
+
+#Logo_App {
+  width: 7rem;
+  height: 7rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  border-radius: 10%;
+  border-color: #e07c34;
+}
+
+#Logo_Header {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  color: #f6e7cd;
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.container.container {
+  margin-top: auto;
+  max-width: 600px;
+  background-color: #fff7e9;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 16px 16px;
+}
+
+@media only screen and (min-width: 424px) {
+  .container {
+    padding: 24px 36px;
+  }
+}
+
+.Profile_row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 8px;
+  gap: 8px;
+}
+
+.profile_row_item {
+  flex: 1 1 0%;
+}
+
+.profile_picture {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.My_Books {
+  display: inline-block;
+  font-size: 28px;
+  text-align: center;
+  color: #e07c34;
+}
+
+.Order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  color: #343434;
+}
+
+#drop_down_button {
+  background-color: #e07c34;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  font-size: 15px;
+  padding: 5px;
+  text-align: center;
+
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown {
+    position: relative;
+}
+
+#optionsList:checked ~ #dropdownContainer {
+  display: block;
+}
+
+#dropdownContainer {
+  display: none;
+  border: 1px solid #ccc;
+  position: absolute;
+  width: 60px;
+  background-color: #fff;
+  top: 20px;
+}
