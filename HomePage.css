@@ -285,3 +285,19 @@ li:hover {
 .hide {
   display: none;
 }
+
+
+.Add_Book_Title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Add_Book_Title > button {
+  border: 0;
+  border-radius: 16px;
+  background: #e07c34;
+  color: white;
+  padding: 6px 16px;
+  cursor: pointer;
+}
