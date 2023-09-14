@@ -1,7 +1,7 @@
 //
 class MyBooksState {
   constructor() {
-    this.books = [];
+    this.books = JSON.parse(localStorage.getItem('myBooks')) || [];
   }
 
   addBookFromForm() {
@@ -24,6 +24,10 @@ class MyBooksState {
       genre,
     });
 
+    // update the local storage book list
+
+    localStorage.setItem('myBooks', JSON.stringify(this.books));
+
     updateBooksList();
   }
 
@@ -42,6 +46,8 @@ class MyBooksState {
     if (index === -1) return;
 
     this.books.splice(index, 1);
+
+    localStorage.setItem('myBooks', JSON.stringify(this.books));
 
     updateBooksList();
   }
@@ -127,6 +133,7 @@ function hideAddBookModal() {
 }
 
 window.addEventListener("load", () => {
+    const myBooksState = new MyBooksState();
   updateBooksList();
 
   const formElem = document.querySelector(".Add_Book_Form");
